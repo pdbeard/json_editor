@@ -4,18 +4,32 @@
 <head>
   <meta charset="utf-8" />
   <title>Advanced JSON Editor Example</title>
+   <!-- Foundation CSS framework (Bootstrap and jQueryUI also supported) -->
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/foundation/5.0.2/css/foundation.min.css'>
+    <!-- Font Awesome icons (Bootstrap, Foundation, and jQueryUI also supported) -->
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+
 
   <script src="../dist/jsoneditor.js"></script>
+  <script>
+  // Set the default CSS theme and icon library globally
+  JSONEditor.defaults.theme = 'foundation6';
+  JSONEditor.defaults.iconlib = 'fontawesome4';
+  </script>
 </head>
 
 <body>
 
-  <button id='submit'>Submit (console.log)</button>
-  <button id='restore'>Restore to Default</button>
-  <button id='enable_disable'>Disable/Enable Form</button>
-  <span id='valid_indicator'></span>
-
   <div id='editor_holder'></div>
+
+
+   <div style="width:80%; float:right; padding-left:5px;">
+    <button id='submit'>Submit (console.log)</button>
+    <button id='restore'>Restore to Default</button>
+    <button id='enable_disable'>Disable/Enable Form</button>
+    <span id='valid_indicator'></span>
+    </div>
+
 
   <script>
     // This is the starting value for the editor
